@@ -3,7 +3,100 @@
 @import "fonts";
 @import "global";
 
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.blok-left {
+  /* border: 1px solid #888; */
+  width: 50%;
+  position: relative;
+  img {
+    width: 100%;
+    opacity: 0.6;
+  }
+}
 
+.container-pentacle {
+  position: absolute;
+  width: 40%;
+
+  transform-style: preserve-3d;
+  animation-name: spincube;
+  animation-duration: 10s;
+  /* transform-origin: center center 0; */
+  transform-origin: 50% -100% 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  /* animation: fire 10s linear infinite both; то же самое, но в одну строку */
+  /* transform-origin: 50% $distance 50%;
+   transform: rotate3d(1, 1, 1, 45deg);
+  transform: rotateX(90deg); */
+}
+
+.side {
+  position: absolute;
+  backface-visibility: hidden; /*обратная сторона не видна */
+  color: white;
+}
+.front {
+  transform: translateZ($distance);
+}
+.back {
+  transform: rotateY(180deg) translateZ($distance);
+}
+.right {
+  transform: rotateY(90deg) translateZ($distance);
+}
+.left {
+  transform: rotateY(-90deg) translateZ($distance);
+}
+.top {
+  transform: rotateX(90deg) translateZ($distance);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ($distance);
+}
+/* --------------------------------Анимация пентаграммы начало-----------------------------------------*/
+@keyframes spincube {
+  12%,
+  20% {
+    /* 2 */
+    transform: rotatey(-180deg) rotateZ(90deg) rotatez(270deg);
+    transition: 3s;
+  }
+  29%,
+  37% {
+    /* 3 */
+    transform: rotateY(-90deg) /* rotateZ(-270deg) rotateZ(-90deg) */;
+  }
+  46%,
+  54% {
+    /* 4 */
+    transform: rotateY(-270deg) rotateZ(270deg) rotateZ(90deg) /* */;
+  }
+  62%,
+  70% {
+    /* 5 */
+    transform: rotateX(-90deg);
+  }
+  79%,
+  87% {
+    /* 6 */
+    transform: rotateX(90deg) rotateZ(270deg) rotateZ(90deg);
+  }
+  92%,
+  98% {
+    /* 1 */
+    transform: rotateX(0deg) /* rotateZ(-270deg) rotateZ(-90deg) */;
+  }
+}
+/*-------------------------------------- Анимация пентаграммы конец---------------------------------*/
+
+.blok-right {
+  border: 1px solid #888;
+  width: 50%;
+}
 
 @import "media";
-
