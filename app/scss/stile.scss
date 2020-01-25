@@ -19,7 +19,7 @@
 
 .container-pentacle {
   position: absolute;
-  width: 40%;
+  width: 45%;
 
   transform-style: preserve-3d;
   animation-name: spincube;
@@ -37,7 +37,7 @@
 
 .side {
   position: absolute;
-  backface-visibility: hidden; /*обратная сторона не видна */
+  /*backface-visibility: hidden; обратная сторона не видна */
   color: white;
 }
 .front {
