@@ -6,34 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ТехноМагия</title>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase:300,700|Underdog&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/stile.min.css">
 </head>
 
 <body>
   <div class="canv">
     <canvas id=c></canvas>
+    <div class="translit">
+      Выбрать язык
+      <select>
+        <option>RU</option>
+        <option>EN</option>
+      </select>
+    </div>
   </div>
 
   <div class="container">
 
     <header class="header wrap">
 
-      <div class="blok-left" id="blok-left">
+      <div class="blok-left wrap-blok" id="blok-left">
         <img src="images/mag.png" alt="">
-        <div onresize="pentacle()" class="container-pentacle" id="container-pentacle"><!--  -->
-
+         <div onresize="pentacle()" class="container-pentacle" id="container-pentacle">
           <div class="side front" id="front"><img src="images/1.png" alt=""></div>
           <div class="side back" id="back"><img src="images/2.png" alt=""></div>
           <div class="side right" id="right"><img src="images/3.png" alt=""></div>
           <div class="side left" id="left"><img src="images/4.png" alt=""></div>
           <div class="side top" id="top"><img src="images/5.png" alt=""></div>
           <div class="side bottom" id="bottom"><img src="images/6.png" alt=""></div>
-
-        </div>
+        </div> <!---->
       </div>
 
-      <div class="blok-right">
-        правыый блок
+      <div class="blok-right wrap-blok">
+        <div class="title">
+          Вёрстка сайтов
+        </div>
+
+        <nav class="menu">
+          <div><a href="#">Блог</a></div>
+          <div><a href="#">Мои работы</a></div>
+          <div><a href="#">Цены</a></div>
+          <div><a href="#">Контакты</a></div>
+        </nav>
+
+        <div class="container-billboard" id="container-billboard">
+
+          <div class="billboard" id="billboard">
+            <div class="item item-1" id="item-1"> Вёрстка волшебных лендингов<br> (+100 к продажам)</div>
+            <div class="item item-2" id="item-2"> Вёрстка магических визиток <br> (+80 к известности)</div>
+            <div class="item item-3" id="item-3"> Сайт портфолио <br> (+50 к удаче)</div>
+            <div class="item item-4" id="item-4"> Магия<br>CSS HTML JavaScript</div>
+          </div>
+
+          <div class="container-point">
+            <div class="point" id="point-1"></div>
+            <div class="point" id="point-2"></div>
+            <div class="point" id="point-3"></div>
+            <div class="point" id="point-4"></div>
+          </div>
+
+          
+        </div>
+
       </div>
 
     </header>
@@ -42,7 +77,7 @@
 
 
 
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

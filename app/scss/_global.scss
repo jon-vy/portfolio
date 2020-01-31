@@ -3,12 +3,21 @@
   padding: 0;
   box-sizing: border-box;
   }
-  .canv
-{
+  .canv {
   position: fixed;
   width: 100vw;
   height: 100vh;
  }
+ .translit {
+   display: none;
+  position: absolute;
+  color: white;
+  right: 10px;
+  top: 10px;
+  select {
+    cursor: pointer;
+  }
+}
  .container {
    position: absolute;
    width: 100%;
@@ -17,4 +26,7 @@
  .wrap {
    max-width: 1200px;
    margin: 0 auto;
+ }
+ .wrap-blok {
+   min-width: 320px;
  }

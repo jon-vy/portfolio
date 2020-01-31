@@ -95,8 +95,146 @@
 /*-------------------------------------- Анимация пентаграммы конец---------------------------------*/
 
 .blok-right {
-  border: 1px solid #888;
+  /* border: 1px solid #888; */
   width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
+.title {
+  text-align: center;
+  font-size: 5vw;
+  margin-top: 4vw;
+  font-family: 'Cormorant Unicase', serif;
+  font-weight: 700;
+}
+.menu {
+  margin-top: -2vw;
+  display: flex;
+  justify-content: space-between;
+  a {
+    font-size: 2.5vw;
+    color: white;
+    cursor: pointer;
+  }
+}
+.container-billboard {
+  display: flex;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+  /* border: 3px solid #fff; */
+}
+.billboard {
+  /* border: 3px solid red; */
+  width: 90%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  /* transform: rotateX(45deg); */
+  animation-name: slider;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  
+  /* transform-origin: 50% $distance1 50%; координаты относительно которых происходит анимация */
+}
+.item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 5px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2.5vw;
+  background-color: rgba(178,169,169,0.9);
+  box-shadow:1px 0px 100px 5px rgba(178,169,169,1)inset;
+  /* backface-visibility: hidden; */
+  font-family: 'Cormorant Unicase', serif;
+  font-weight: 700;
+}
+.item-1 { transform: translateZ($distance1); }
+.item-2 { transform: rotateX(90deg) translateZ($distance1); }
+.item-3 { transform: rotateX(180deg) translateZ($distance1); }
+.item-4 { transform: rotateX(270deg) translateZ($distance1); }
+
+.container-point {
+  /* border: 3px solid blueviolet; */
+  height: 140px;
+  margin: auto 0px auto 30px;
+  display: none;  /**/
+}
+ .container-billboard:hover .container-point {
+  display: block;
+} /**/
+.point {
+  box-shadow:0px 0px 3px 3px rgba(178,169,169,1)inset;
+  margin: 10px 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.point:hover {
+  box-shadow:1px 0px 100px 5px rgba(178,169,169,1)inset;
+}
+ .point:active{
+  border: 2px solid #fff;
+} /**/
+
+/* ----------Aнимация-------------- */
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
+/* Aнимация вращение текста начало */
+@keyframes slider
+{
+   /*  0%, 5% {
+        transform: rotateX(0deg) ;
+    }	 */	
+    20%, 25% {
+        transform: rotateX(-90deg) /* rotateZ(10deg) */;
+    }
+    45%, 50% {
+        transform: rotateX(-180deg) /* rotateZ(-10deg) */;
+    }
+    70%,75% {
+        transform: rotateX(-270deg) /* rotateZ(10deg) */;
+    }
+    90%, 100% {
+        transform: rotateX(-360deg) ;
+    }
+} 
+
+/* нажимаю на кружки и поворачиваю нужной стороной баннер*/
+@keyframes slider-1 {
+  0% {transform: rotateX(-360deg);}
+  100% {transform: rotateX(0deg);}
+}
+@keyframes slider-2 {
+  0% {transform: rotateX(90deg);}
+  100% {transform: rotateX(-90deg);}
+}
+@keyframes slider-3 {
+  0% {transform: rotateX(180deg);}
+  100% {transform: rotateX(-180deg);}
+}
+@keyframes slider-4 {
+  0% {transform: rotateX(270deg);}
+  100% {transform: rotateX(-270deg);}
+}
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
+
+
 
 @import "media";
