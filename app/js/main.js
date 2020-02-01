@@ -1,3 +1,6 @@
+
+ 
+
 (() => {
   let $ = c.getContext("2d"),
     w = c.width = window.innerWidth,
@@ -29,7 +32,11 @@
   })
 })()
 
-
+ window.onload = function() {
+    
+    window.setTimeout(function () {
+document.getElementById('container').style.display = 'block';
+document.getElementById('preload').style.display = 'none';
 
 /* Функция для перещёта размера пентакля */
 function pentacle() {
@@ -135,9 +142,5 @@ function billboardF() {
   console.log('translateZ ' + distance1);
 }
 billboardF();
-
-
-
-
-
-
+    }, 2000);
+  }

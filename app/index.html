@@ -20,15 +20,26 @@
         <option>EN</option>
       </select>
     </div>
+    <div class="preload" id="preload">
+      <div class="preload__title">
+        Загрузка
+      </div>
+      <div class="preload__anim">
+        <svg viewBox="-2000 -1000 4000 2000">
+          <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
+          <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
+      </svg>
+      </div>
+    </div>
   </div>
 
-  <div class="container">
+  <div class="container animated 1 fadeIn delay-1s" id="container">
 
     <header class="header wrap">
 
       <div class="blok-left wrap-blok" id="blok-left">
         <img src="images/mag.png" alt="">
-         <div onresize="pentacle()" class="container-pentacle" id="container-pentacle">
+         <div  class="container-pentacle" id="container-pentacle">
           <div class="side front" id="front"><img src="images/1.png" alt=""></div>
           <div class="side back" id="back"><img src="images/2.png" alt=""></div>
           <div class="side right" id="right"><img src="images/3.png" alt=""></div>
