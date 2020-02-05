@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ТехноМагия</title>
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase:300,700|Underdog&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase:300,700|Underdog&display=swap&subset=cyrillic"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/stile.min.css">
 </head>
 
@@ -28,35 +29,36 @@
         <svg viewBox="-2000 -1000 4000 2000">
           <path id="inf" d="M354-354A500 500 0 1 1 354 354L-354-354A500 500 0 1 0-354 354z"></path>
           <use xlink:href="#inf" stroke-dasharray="1570 5143" stroke-dashoffset="6713px"></use>
-      </svg>
+        </svg>
       </div>
     </div>
   </div>
 
-  <div class="container animated 1 fadeIn delay-1s" id="container">
+  <div class="container animated 1 fadeIn delay-0.1s" id="container">
 
     <header class="header wrap">
 
-      <div class="blok-left wrap-blok" id="blok-left">
-        <img src="images/mag.png" alt="">
-         <div  class="container-pentacle" id="container-pentacle">
+      <div class="blok-left wrap-blok" id="blok-left" >
+        <img src="images/mag.png" alt="" id="height-mag">
+        <div class="container-pentacle" id="container-pentacle">
           <div class="side front" id="front"><img src="images/1.png" alt=""></div>
           <div class="side back" id="back"><img src="images/2.png" alt=""></div>
           <div class="side right" id="right"><img src="images/3.png" alt=""></div>
           <div class="side left" id="left"><img src="images/4.png" alt=""></div>
           <div class="side top" id="top"><img src="images/5.png" alt=""></div>
           <div class="side bottom" id="bottom"><img src="images/6.png" alt=""></div>
-        </div> <!---->
+        </div>
+        <!---->
       </div>
 
-      <div class="blok-right wrap-blok">
-        <div class="title">
+      <div class="blok-right wrap-blok" id="blok-right" >
+        <div class="title" id="up">
           Вёрстка сайтов
         </div>
 
         <nav class="menu">
           <div><a href="#">Блог</a></div>
-          <div><a href="#">Мои работы</a></div>
+          <div><a href="#my-works__title">Мои работы</a></div>
           <div><a href="#">Цены</a></div>
           <div><a href="#">Контакты</a></div>
         </nav>
@@ -77,17 +79,99 @@
             <div class="point" id="point-4"></div>
           </div>
 
-          
+
         </div>
 
       </div>
 
     </header>
+    <section class="wrap__my-works">
+      <div class="my-works__title" id="my-works__title">
+        Мои работы
+      </div>
+      <div class="my-works__sub-title">
+        <div class="sub-title" id="sub-title__layout">
+          Вёрстка
+        </div>
+        <div class="sub-title" id="sub-title__other">
+          Прочее
+        </div>
+      </div>
+      <div class="my-works">
+
+        <div class="works animated fadeIn" id="layout">
+          <div class="work">
+            <a href="#">
+              <img src="images/1.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/2.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/3.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/4.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/5.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="works animated fadeIn" id="other">
+          <div class="work">
+            <a href="#">
+              <img src="images/6.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/7.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/8.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/9.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+          <div class="work">
+            <a href="#">
+              <img src="images/10.jpg" alt="">
+              <span>Lorem ipsum dolor sit amet.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </div>
 
 
-
+  <a id="btn__up" class="btn__up animated infinite heartBeat" href="#up"><span>UP</span></a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js" defer></script>
   <script src="js/main.js" defer></script>

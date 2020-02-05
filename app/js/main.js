@@ -32,11 +32,11 @@
   })
 })()
 
- window.onload = function() {
-    
-    window.setTimeout(function () {
-document.getElementById('container').style.display = 'block';
-document.getElementById('preload').style.display = 'none';
+
+ window.onload = function() { /* отображение сайта после полной его загрузки */
+  window.setTimeout(function () {
+  document.getElementById('container').style.display = 'block';
+  document.getElementById('preload').style.display = 'none';
 
 /* Функция для перещёта размера пентакля */
 function pentacle() {
@@ -129,18 +129,68 @@ point4.onclick  = function () {
 }
   
 
-
+var heightBlokLeft = document.getElementById('blok-left').offsetHeight;
+document.getElementById('blok-right').style.height = heightBlokLeft + 'px';
+console.log(heightBlokLeft);
 /* -----billboard--------- */
 function billboardF() {
   var heightItem = document.getElementById('item-1').offsetHeight;
+  console.log(heightItem);
   var distance1 = heightItem * 49 / 100;
   document.getElementById('item-1').style.transform = 'translateZ(' + distance1 + 'px )';
   document.getElementById('item-2').style.transform = 'rotateX(90deg)' + 'translateZ(' + distance1 + 'px )';
   document.getElementById('item-3').style.transform = 'rotateX(180deg)' + 'translateZ(' + distance1 + 'px )';
   document.getElementById('item-4').style.transform = 'rotateX(270deg)' + 'translateZ(' + distance1 + 'px )';
-  console.log('высота billboard ' + billboard.offsetHeight);
-  console.log('translateZ ' + distance1);
+  /* console.log('высота billboard ' + billboard.offsetHeight);
+  console.log('translateZ ' + distance1); */
 }
 billboardF();
-    }, 2000);
+
+
+
+/* мои работы */
+    document.getElementById('layout').style.display = 'flex';
+    document.getElementById('sub-title__layout').classList.add('sub-title_active');
+
+    document.getElementById('sub-title__layout').onclick  = function () {
+    document.getElementById('layout').style.display = 'flex';
+    document.getElementById('other').style.display = 'none';
+    document.getElementById('sub-title__layout').classList.add('sub-title_active');
+    document.getElementById('sub-title__other').classList.remove('sub-title_active');
   }
+    document.getElementById('sub-title__other').onclick  = function () {
+    document.getElementById('other').style.display = 'flex';
+    document.getElementById('layout').style.display = 'none';
+    document.getElementById('sub-title__other').classList.add('sub-title_active');
+    document.getElementById('sub-title__layout').classList.remove('sub-title_active');
+  }
+  /* мои работы */
+
+  /* плавный переход по якорям */
+  $("body").on('click', '[href*="#"]', function(e){
+    var fixed_offset = 20;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+    e.preventDefault();
+  });
+  /* плавный переход по якорям */
+
+  /* ----------------Всплывающая кнопка up---------------- */
+window.onscroll = function() {
+  
+  var ButtonScrollUp = window.pageYOffset || document.documentElement.scrollTop;/* количество прокрученных пикселей: http://webdiz.com.ua/glava7-sobitie/prokrutka-dokumenta-sobytie-scroll/ */
+  var heightBtnUp = screen.height / 2; /* высота окна браузена https://qna.habr.com/q/163903 */
+  if (ButtonScrollUp > heightBtnUp) {
+    document.getElementById('btn__up').style.display = 'block';
+  }
+  else {
+    document.getElementById('btn__up').style.display = 'none';
+  }
+}
+/* ----------------Всплывающая кнопка up---------------- */
+
+}, 200);/* задержка отображения сайта после полной его загрузки */
+  }
+
+
+
+  
