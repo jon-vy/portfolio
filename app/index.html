@@ -38,7 +38,7 @@
 
     <header class="header wrap">
 
-      <div class="blok-left wrap-blok" id="blok-left" >
+      <div class="blok-left wrap-blok" id="blok-left">
         <img src="images/mag.png" alt="" id="height-mag">
         <div class="container-pentacle" id="container-pentacle">
           <div class="side front" id="front"><img src="images/1.png" alt=""></div>
@@ -51,16 +51,16 @@
         <!---->
       </div>
 
-      <div class="blok-right wrap-blok" id="blok-right" >
+      <div class="blok-right wrap-blok" id="blok-right">
         <div class="title" id="up">
           Вёрстка сайтов
         </div>
 
         <nav class="menu">
-          <div><a href="#">Блог</a></div>
+          <div><a href="blog.html" target="_blank">Блог</a></div>
           <div><a href="#my-works__title">Мои работы</a></div>
           <div><a href="#">Цены</a></div>
-          <div><a href="#">Контакты</a></div>
+          <div><a href="#" id="contacts">Контакты</a></div>
         </nav>
 
         <div class="container-billboard" id="container-billboard">
@@ -166,8 +166,34 @@
         </div>
       </div>
     </section>
+    <div class="feedback" id="feedback">
+      <div class="wrap__feedback">
 
+        <img src="images/close.png" alt="" class="feedback__close" id="feedback__close">
+        
+        <div class="feedback__name">
+          <div class="name__title">
+            Представьтесь пожалуйста:
+          </div>
+          <input type="text" name="name">
+        </div>
 
+        <div class="feedback__email">
+          <div class="email__title">
+            Ваш e-mail:
+          </div>
+          <input type="text" name="email">
+        </div>
+        <div class="feedback__message">
+          <div class="message__title">
+            Текст сообщения:
+          </div>
+          <textarea name="msg"></textarea>
+        </div>
+        <button>Отправить</button>
+
+      </div>
+    </div>
   </div>
 
 

@@ -174,6 +174,15 @@ billboardF();
   });
   /* плавный переход по якорям */
 
+  /* форма обратной связи */
+  document.getElementById('contacts').onclick  = function () {
+    document.getElementById('feedback').style.top = 20 + 'px';/* появись */
+  }
+  document.getElementById('feedback__close').onclick  = function () {
+    document.getElementById('feedback').style.top = -425 + 'px';/* отъявись */
+  }
+  /* форма обратной связи */
+
   /* ----------------Всплывающая кнопка up---------------- */
 window.onscroll = function() {
   

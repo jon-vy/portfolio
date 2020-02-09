@@ -113,7 +113,8 @@
 }
 .menu {
   margin-top: -2vw;
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: space-between;
   a {
     font-size: 2.5vw;
@@ -251,6 +252,67 @@
   opacity: 1;
   box-shadow: 0px 0px 10px 10px rgba(235,29,111,1);
 }
+
+.feedback {
+  position: absolute;
+  width: 400px;
+  height: 425px;
+  top: -425px;
+  /* top: 20px; */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  border: 7px double yellow;
+  border-radius: 10px;  
+  transition: 1s;
+ 
+}
+.wrap__feedback {
+  position: relative;
+  padding: 25px 5px;
+  input {
+    padding: 2px;
+    width: 100%;
+    font-size: 14px;
+  }
+  textarea {
+    padding: 2px;
+    width: 100%;
+    min-height: 180px;
+    resize: none;
+  } 
+  button {
+    position: absolute;
+    padding: 4px;
+    border-radius: 4px;
+    margin: 5px;
+    right: 0;
+    cursor: pointer;
+  }
+}
+.feedback__close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  cursor: pointer;
+}
+.feedback__name {
+  margin-bottom: 20px;
+}
+.name__title {
+  margin-bottom: 5px;
+}
+.feedback__email {
+  margin-bottom: 20px;
+}
+.email__title {
+  margin-bottom: 5px;
+}
+.message__title {
+  margin-bottom: 5px;
+}
+
 /* ----------Aнимация-------------- */
 /* ------------------------ */
 /* ------------------------ */
@@ -258,9 +320,7 @@
 /* Aнимация вращение текста начало */
 @keyframes slider
 {
-   /*  0%, 5% {
-        transform: rotateX(0deg) ;
-    }	 */	
+   
     20%, 25% {
         transform: rotateX(-90deg) /* rotateZ(10deg) */;
     }
@@ -297,6 +357,14 @@
 /* ------------------------ */
 /* ------------------------ */
 
+/* страница blog.html */
+.in-working {
+  color: #fff;
+  font-size: 500%;
+  text-align: center;
+  margin: 20% auto;
+}
+/* страница blog.html */
 
 
 @import "media";
