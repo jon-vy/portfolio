@@ -3,12 +3,12 @@
     font-size: 62px;
     margin-top: 50px;
   }
-  .menu {
+  /* .menu {
     margin-top: -25px;
     a {
       font-size: 31px;
     }
-  }
+  } */
   .item {
     font-size: 31px;
   }
@@ -17,5 +17,26 @@
   }
   .my-work__sub-title {
     font-size: 37px;
+  }
+}
+ @media (max-width: 640px) {
+  .title {
+    font-size: 230%;
+  }
+  .item {
+    font-size: 112%;
+  }
+  .my-works__sub-title {
+    font-size: 200%;
+    padding: 0;
+  }
+  .my-works__title {
+    font-size: 187%;
+  }
+
+} 
+@media (max-width: 410px){
+  .feedback {
+    width: 100%;
   }
 }

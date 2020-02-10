@@ -131,11 +131,11 @@ point4.onclick  = function () {
 
 var heightBlokLeft = document.getElementById('blok-left').offsetHeight;
 document.getElementById('blok-right').style.height = heightBlokLeft + 'px';
-console.log(heightBlokLeft);
+/* console.log(heightBlokLeft); */
 /* -----billboard--------- */
 function billboardF() {
   var heightItem = document.getElementById('item-1').offsetHeight;
-  console.log(heightItem);
+  /* console.log(heightItem); */
   var distance1 = heightItem * 49 / 100;
   document.getElementById('item-1').style.transform = 'translateZ(' + distance1 + 'px )';
   document.getElementById('item-2').style.transform = 'rotateX(90deg)' + 'translateZ(' + distance1 + 'px )';
@@ -197,7 +197,7 @@ window.onscroll = function() {
 }
 /* ----------------Всплывающая кнопка up---------------- */
 
-}, 200);/* задержка отображения сайта после полной его загрузки */
+}, 2000);/* задержка отображения сайта после полной его загрузки */
   }
 
 
