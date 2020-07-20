@@ -32,7 +32,7 @@
 
 window.onload = function () { /* отображение сайта после полной его загрузки */
   window.setTimeout(function () {
-    document.getElementById('container').style.display = 'block';
+    document.getElementById('container').style.opacity = '1';
     document.getElementById('preload').style.display = 'none';
 
     /* Функция для перещёта размера пентакля */
@@ -171,23 +171,17 @@ window.onload = function () { /* отображение сайта после п
     });
     /*плавный переход по якорям */
 
+
+
+
+
+
     /* форма обратной связи */
-
-
-
-
-
-
-
-
-
-
-
     document.getElementById('contacts').onclick = function () {
       document.getElementById('feedback').style.top = 20 + 'px'; /* появись */
     }
     document.getElementById('feedback__close').onclick = function () {
-      document.getElementById('feedback').style.top = -425 + 'px'; /* отъявись */
+      document.getElementById('feedback').style.top = -500 + 'px'; /* отъявись */
     }
 
 
@@ -227,43 +221,43 @@ window.onload = function () { /* отображение сайта после п
         dataType: 'html',/* тип передаваемых данных */
         beforeSend: function () { /*время работы параметра - сразу после нажатия на кнопку отправить и до того как получу результат работы send.php  */
           $("#send").prop("disabled", true); /* на время работы send.php делает кнопку "отправить" не активной */
-          $("#error").text("отправка");
+          $("#send").css("cursor", "default");
+          $("#send").text("Отправка");
+          
         },
         success: function (data) {      /* выполняется после получения результатов работы send.php */
           /*alert(data);  посмотреть результат работы send.php */
           if (data == 'ok') {
-            $("#send").prop("disabled", false);  /* делаем кнопку отправить снова активной */
-            $("#error").text("сообщение отправлено");
+            $("#send").text("Сообщение отправлено");
             
             setTimeout(function () {
               $("#mailForm").trigger("reset");
+              $("#send").prop("disabled", false);  /* делаем кнопку отправить снова активной */
               $("#error").text("");
-              $("#feedback").css("top", "-425px");
+              $("#feedback").css("top", "-500px");
+              $("#send").text("Отправить");
+              $("#send").css("cursor", "pointer");
               }, 3000);
            
-            /*document.getElementById('feedback').style.top = -425 + 'px';  отъявись */
           } else {
-            $("#error").text("ошибка сообщение не отправлено");
             alert(data);
+            $("#send").text("Сообщение не отправлено");
+            $("#send").css("cursor", "default");
           }
-          
-          
         }
-
       });
-
-
     });
 
     /* Отправка почты */
 
-
-
-
-
-
-
     /* форма обратной связи */
+
+
+
+
+
+
+    
 
     /* ----------------Всплывающая кнопка up---------------- */
     window.onscroll = function () {

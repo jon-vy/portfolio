@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="yandex-verification" content="edc2ade37c4baf34" />
     <title>ТехноМагия</title>
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase:300,700|Underdog&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/stile.min.css">
 </head>
 
 <body>
-
     <?php include $_SERVER['DOCUMENT_ROOT'] . "/php/preload.php";?>
 
     <div class="container animated 1 fadeIn delay-0.1s" id="container">
@@ -19,7 +19,7 @@
         <header class="header wrap">
 
             <div class="blok-left wrap-blok" id="blok-left">
-                <img src="images/mag.png" alt="" id="height-mag">
+                <img src="images/mag.png" alt="" id="height-mag" class="mag">
                 <div class="container-pentacle" id="container-pentacle">
                     <div class="side front" id="front"><img src="images/1.png" alt=""></div>
                     <div class="side back" id="back"><img src="images/2.png" alt=""></div>
@@ -49,7 +49,7 @@
                         <div class="item item-1" id="item-1"> Вёрстка волшебных лендингов<br> (+100 к продажам)</div>
                         <div class="item item-2" id="item-2"> Вёрстка магических визиток <br> (+80 к известности)</div>
                         <div class="item item-3" id="item-3"> Сайт портфолио <br> (+50 к удаче)</div>
-                        <div class="item item-4" id="item-4"> Магия<br>HTML CSS JavaScript php</div>
+                        <div class="item item-4" id="item-4"> Магия<br>HTML CSS JavaScript</div>
                     </div>
 
                     <div class="container-point" id="container-point">
@@ -79,6 +79,18 @@
 
             <div class="my-works">
                 <div class="works animated fadeIn" id="layout">
+                    <div class="work">
+                        <a href="http://xn-------53ddl0a2abcd3ac1adhg7alojdk0wra.xn--p1acf/Photography/index.html" target="_blank">
+                            <img src="images/Photography.png" alt="">
+                            <span>Сайт портфолио для девушки фотографа</span>
+                        </a>
+                    </div>
+                    <div class="work">
+                        <a href="http://xn-------53ddl0a2abcd3ac1adhg7alojdk0wra.xn--p1acf/raw-free/index.html" target="_blank">
+                            <img src="images/raw-free.png" alt="">
+                            <span>Кулинарный сайт</span>
+                        </a>
+                    </div>
                     <div class="work">
                         <a href="http://xn-------53ddl0a2abcd3ac1adhg7alojdk0wra.xn--p1acf/surf/index.html" target="_blank">
                             <img src="images/go-surf.png" alt="">
@@ -112,6 +124,12 @@
                 </div>
 
                 <div class="works animated fadeIn" id="other">
+				<div class="work">
+				         <a href="http://xn-------53ddl0a2abcd3ac1adhg7alojdk0wra.xn--p1acf/eng/index.html" target="_blank">
+                            <img src="images/eng.jpg" alt="">
+                            <span>Тренажёр для отработки навыков слепой печати</span>
+                        </a>
+                    </div>
                     <div class="work">
                         <a href="php/in-development.php" target="_blank">
                             <img src="images/6.jpg" alt="">
@@ -156,33 +174,30 @@
 
             <img src="images/close.png" alt="" class="feedback__close" id="feedback__close">
 
-
             <form id="mailForm">
 
                 <div class="form-group">
                     <label>Введите ваше имя</label>
-                    <input type="text" class="form-control" name="user_name" id="user_name" placeholder="Например, Иван">
+                    <input type="text" name="user_name" id="user_name" placeholder="Например, Иван">
                 </div>
 
                 <div class="form-group">
                     <label>Введите email</label>
-                    <input type="text" class="form-control" name="user_email" id="user_email" placeholder="mail@mail.ru">
+                    <input type="text" name="user_email" id="user_email" placeholder="mail@mail.ru">
                 </div>
 
                 <div class="form-group">
                     <label>Сообщение</label>
-                    <textarea type="text" class="form-control" name="user_msg" id="user_msg" placeholder="Текст сообщения"></textarea>
+                    <textarea type="text" name="user_msg" id="user_msg" placeholder="Текст сообщения"></textarea>
                 </div>
-
-                <button type="button" class="btn btn-primary" id="send">Отправить</button>
+                <div id="error"></div>
+                <button type="button" class="button-send" id="send">Отправить</button>
 
             </form>
-
-            <div id="error"></div>
         </div>
-
     </div>
 
+    
 
 
 
@@ -192,6 +207,25 @@
 
     <script src="js/main.js" defer></script>
     <!-- <script src="js/1.js" defer></script> -->
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(51592520, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/51592520" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
 
 </body>
 
